@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;700&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+}
+
+html{
+    width: 100vw;
+    height: 100vw;
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+/*Menu*/
+
+.content{
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    background-color: #1f1e1f;
+    justify-content: space-around;
+    position: fixed;
+    align-items: center;
+    
+}
+.logo{
+    width: 70px;
+    height: auto;
+    display: flex;
+    align-items: center;
+  
+}
+.logo .logo-title{
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.logo img{
+width: 100%;
+height: 100%;
+}
+.content .menu{
+    width: 600px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    padding: 3rem 1rem 2rem 1rem;
+}
+.content .menu li a{
+color: #fff;
+font-size: 1.8rem;
+font-weight:500px;
+text-transform: uppercase;
+transition: all 204ms ease-in;
+}
+.content .menu li a:hover{
+    border-bottom: 4px solid #ffc506;
+    background-color: #333333;
+    color: #ffc506;
+}
+
+
+/*Conteudo-Principal*/
+.Conteudo-principal{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(29,29,29,0.8),rgba(29,29,29,0.8)),url(./Assents/fundopizza.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 50px;
+}
+.Conteudo-principal .Cp-Title{
+    color: #ffc506;
+    font-size: 6rem;
+}
+.Conteudo-principal .Cp-Subtitle{
+    font-size:3rem ;
+    color: #fff;
+    font-weight: 400;
+}
+.btn{
+    width: 400px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 4rem;
+    
+}
+.btn button{
+    width: 200px;
+    color: #1f1e1f;
+    border-radius: 10px;
+    font-size: 1.5em;
+    background-color: #ffc506;
+    transition: all 204ms ease-in;
+  
+}
+.btn button:hover{
+    background-color: transparent;
+    border: 1px solid #ffc506;
+    color: #fff;
+}
+/*Seccao Sobre Nos*/
+.Sobre-Nos{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    background-color: #1f1e1f;
+}
+.Cozinha img{
+    width: 300px;
+    height: 400px;
+    margin-top: 6rem;
+    border: 1px solid #fff;
+    margin-left: 3rem;
+}
+.Content{
+display: flex;
+padding: 4rem;
+justify-content: center;
+gap:10;
+
+}
+.Descricao{
+    display: flex;
+    
+}
+.Decricao h2{
+    text-align: center;
+    font-size: 6rem;
+    color: #fff;
+}
+.Decricao p{
+    width: 500px;
+font-size: 1.8rem;
+color: whitesmoke;
+line-height: 2.2rem;
+}
+/*Cardapio*/
+.cardapio{
+    background-image: linear-gradient(rgba(12, 12, 12, 0.8), rgba(15, 15, 15, 0.8)), url(/Assents/cardapio.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    width: 100vw;
+}
+.cardapio h1{
+    margin-top: 2rem;
+    font-size: 6rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+.itens-Cardapio{
+    width: 80%;
+    display: grid;
+    place-items: center;
+    align-items: center;
+    grid-gap:30px;
+    justify-content: center;
+    grid-template-columns:  35% 35%;
+    grid-template-rows: repeat(6) ;
+    grid-template-areas: "C-item1 C-item2";
+    height: 100%;
+   
+}
+
+
+.cardapio img{
+    width: 100%;
+    height: 200px;
+}
+.itens-Cardapio div{
+    background-color:#5e5252 ;
+    box-shadow: 0px 0px 4 px 1px;
+    width: 100%;
+    margin-top: 2rem;
+ 
+   
+
+
+}
+
+.itens-Cardapio .info{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    height: 150%;
+    border-radius: 0px 50px 0px 50px;
+  
+
+}
+.itens-Cardapio .info h4,#Price{
+display: flex;
+gap: 50px;
+}
+.itens-Cardapio .info ,#Price{
+    font-weight: 500;
+}
+.itens-Cardapio .info h3{
+    font-size: 2.2rem;
+    margin-top: 2rem;
+
+}
+.itens-Cardapio .info h4{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+.itens-Cardapio .info .btn-pedir{
+    width: 50%;
+    height: 5rem;
+    margin-bottom: 2rem;
+    background-color: #ffc506;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.itens-Cardapio .info .btn-pedir:hover{
+    width: 52%;
+    height: 5.2rem;
+    background-color: black;
+    color: white;
+}
+footer{
+    background-color: #1f1e1f;
+    width: 100vw;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+footer h1{
+    display: grid;
+    place-items: center;
+    margin-top: 3rem;
+    font-size: 6rem;
+    color: white;
+}
+.Contactos{
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 50% 50% 50%;
+width: 100%;
+place-items: center;
+margin-top: 4rem;
+gap: 10px;
+
+}
+.Contactos img{
+    width: 100px;
+    height:100px ;
+ 
+}
+.Enderecos{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.Enderecos h3{
+    font-size: 2.2rem;
+}
+.Enderecos span{
+    font-size: 1.4rem;
+}
+.Contactos .Redes-Socias {
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.Contactos .Redes-Socias span{
+    font-size: 2.2rem;
+    margin-left: 2rem;
+}
+.Contactos .Redes-Socias i{
+    font-size: 3rem;
+}
+
+.RS-Icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-right: 12em;
+}
+.Logo-PizzaShop{
+    display: flex;
+    align-items: center;
+
+    
+}
+.Logo-PizzaShop h2{
+    font-size: 3rem;
+}
