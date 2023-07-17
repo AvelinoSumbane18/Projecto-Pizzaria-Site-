@@ -174,6 +174,7 @@ line-height: 2.2rem;
     grid-template-rows: repeat(6) ;
     grid-template-areas: "C-item1 C-item2";
     height: 100%;
+    margin-bottom: 4rem;
    
 }
 
@@ -231,19 +232,21 @@ gap: 50px;
     font-size: 1.6rem;
     font-weight: 700;
 }
-.itens-Cardapio .info .btn-pedir:hover{
+ .info .btn-pedir:hover{
     width: 52%;
     height: 5.2rem;
     background-color: black;
     color: white;
 }
+/*Footer*/
 footer{
     background-color: #1f1e1f;
     width: 100vw;
-    height: 20%;
+    height: 400px;
     display: flex;
     flex-direction: column;
     color: white;
+    max-height: 20%;
 }
 footer h1{
     display: grid;
@@ -259,8 +262,10 @@ grid-template-rows: 50% 50% 50%;
 width: 100%;
 place-items: center;
 margin-top: 4rem;
-gap: 10px;
-
+gap:20px;
+grid-template-areas: "Enderecos Redes-Socias"
+                     "politicas politicas"
+                     "Reservados Reservados";
 }
 .Contactos img{
     width: 100px;
@@ -271,17 +276,19 @@ gap: 10px;
     display: flex;
     flex-direction: column;
     gap: 5px;
+    grid-area: Enderecos;
 }
 .Enderecos h3{
     font-size: 2.2rem;
 }
 .Enderecos span{
-    font-size: 1.4rem;
+    font-size: 1.5rem;
 }
 .Contactos .Redes-Socias {
     display:flex;
     flex-direction: column;
     gap: 10px;
+    grid-area: Redes-Socias;
 }
 .Contactos .Redes-Socias span{
     font-size: 2.2rem;
@@ -306,4 +313,26 @@ gap: 10px;
 }
 .Logo-PizzaShop h2{
     font-size: 3rem;
+}
+.politicas{
+    grid-area: politicas;
+    display: flex;
+    font-size: 1.5rem;
+    gap: 10px;
+}
+.politicas a{
+    color: #fff;
+}
+.Reservados{
+    grid-area: Reservados;
+    width: 100vw;
+    height: 20%;
+    background-color: black;
+    color: white;
+    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+font-size: 1.1rem;
+
 }
