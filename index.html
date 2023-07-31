@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body>
+ <!-- Seccao Menu-->
+ <input type="checkbox" class="Fake-Menu">
+
 <header class="content">
 
     <div class="logo">
@@ -17,13 +20,21 @@
         </span>
 
     </div>
+  
+<div class="menu-Hamburguer">
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+
+</div>
 
     <nav>
+      
         <ul class="menu">
             <li><a href="#">Home</a></li>
-            <li><a href="#">Sobre Nos</a></li>
-            <li><a href="#">Cardapio</a></li>
-            <li><a href="#">Contactos</a></li>
+            <li><a href="#Sobre-Nos">Sobre Nos</a></li>
+            <li><a href="#cardapio">Cardapio</a></li>
+            <li><a href="#Contactos">Contactos</a></li>
             <li><a href="#"> <i class="bi bi-instagram"></i></a></li>
             <li><a href="#"><i class="bi bi-facebook"></i></a></li>
             <li><a href="#"><i class="bi bi-cart"></i></a></li>
@@ -35,6 +46,7 @@
 </header>
 
 <main>
+     <!-- Seccao Conteudo-principal-->
     <a href="#">
         <section class="Conteudo-principal">
             <span class="Cp-Title">Deixe Seu Dia Mais Saboroso</span>
@@ -45,11 +57,9 @@
         
             </div>
         </section>
-
-    </a>
     
-    
-    <section class="Sobre-Nos">
+    <!-- Seccao Sobre Nos-->
+    <section class="Sobre-Nos" id="Sobre-Nos">
         <div class="Content">
             <div class="Decricao">
                 <h2>Sobre Nos</h2>
@@ -72,12 +82,13 @@
             </div>
         </div>
     </section>
+
+     <!-- Seccao cardapio-->
     <section class="cardapio" id="cardapio">
         
             <h1> Cardapio</h1>
         
         <div class="itens-Cardapio">
-            <div>
                 <div class="C-item1" >
                     <img src="./Assents/frango-removebg-preview.png" alt="pizzaFrango">
                     <div class="info">
@@ -87,12 +98,9 @@
                         <h4> 12 fatias <span id="Price"> 1000 MTn</span></h4>
                         <button class="btn-pedir"> Pedir Agora</button>
 
-                    </div>
-                     
+                    </div>          
                 </div>
-        
-            </div>
-            <div>
+       
                 <div class="C-item2">
                     <img src="./Assents/prestigio-removebg-preview.png" alt="pizzaprestigio">
                     <div class="info">
@@ -103,11 +111,8 @@
                     <button class="btn-pedir"> Pedir Agora</button>
                     </div>
                      
-                </div>
-        
-            </div>
-          
-            <div>
+                </div>  
+           
                 <div class="C-item1">
                     <img src="./Assents/confete-removebg-preview.png" alt="pizzaFrango">
                     <div class="info">
@@ -120,8 +125,6 @@
                   
                 </div>
         
-            </div>
-            <div>
                 <div class="C-item2">
                     <img src="./Assents/portuguesa-removebg-preview.png" alt="pizzaportuguesa">
                     <div class="info">
@@ -134,8 +137,6 @@
                     
                 </div>
         
-            </div>
-            <div>
                 <div class="C-item1">
                     <img src="./Assents/chocolate-removebg-preview.png" alt="pizzachocolate">
                     <div class="info">
@@ -147,9 +148,7 @@
                     </div>
                      
                 </div>
-        
-            </div>
-            <div>
+                           
                 <div class="C-item2">
                     <img src="./Assents/strogonoff-removebg-preview.png" alt="pizzastrogonoff">
                     <div class="info">
@@ -161,62 +160,48 @@
                     </div>
                     
                 </div>
-        
-            </div>
-            <div>
-                <div class="C-item1">
-                    <img src="./Assents/sensacao-removebg-preview.png" alt="pizzasensacao">
-                    <div class="info">
-                        <h3> Sensacao</h3>
-                        <h4> 6 fatias <span id="Price"> 400 MTn</span></h4>
-                        <h4> 8 fatias <span id="Price"> 850 MTn</span></h4>
-                        <h4> 12 fatias <span id="Price"> 1000 MTn</span></h4>
-                        <button class="btn-pedir"> Pedir Agora</button>
-                    </div>
+             
+                    <div class="C-item1">
+                        <img src="./Assents/sensacao-removebg-preview.png" alt="pizzasensacao">
+                        <div class="info">
+                            <h3> Sensacao</h3>
+                            <h4> 6 fatias <span id="Price"> 400 MTn</span></h4>
+                            <h4> 8 fatias <span id="Price"> 850 MTn</span></h4>
+                            <h4> 12 fatias <span id="Price"> 1000 MTn</span></h4>
+                            <button class="btn-pedir"> Pedir Agora</button>
+                        </div>
+                        
+                    </div>      
+
+                    <div class="C-item2"  >
+                        <img src="./Assents/calabresa-removebg-preview.png" alt="pizzacalabresa">
+                        <div class="info">
+                            <h3> Calabresa</h3>
+                            <h4> 6 fatias <span id="Price"> 400 MTn</span></h4>
+                            <h4> 8 fatias <span id="Price"> 850 MTn</span></h4>
+                            <h4> 12 fatias <span id="Price"> 1000 MTn</span></h4> 
+                            <button class="btn-pedir"> Pedir Agora</button>
+                        </div>
                     
-                </div>
-        
-            </div>
-            <div>
-                <div class="C-item2">
-                    <img src="./Assents/calabresa-removebg-preview.png" alt="pizzacalabresa">
-                    <div class="info">
-                        <h3> Calabresa</h3>
-                        <h4> 6 fatias <span id="Price"> 400 MTn</span></h4>
-                        <h4> 8 fatias <span id="Price"> 850 MTn</span></h4>
-                        <h4> 12 fatias <span id="Price"> 1000 MTn</span></h4> 
-                        <button class="btn-pedir"> Pedir Agora</button>
                     </div>
+
+
+              
+                  
+                    
+
+        
+                   
+
+               
                 
-                </div>
-        
-            </div>
-          
-
         </div>
-    
-        
-      
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </section>
 </main>
+<!-- Seccao Contactos-->
 <footer>
     <h1> Contactos</h1>
-    <section class="Contactos">
+    <section class="Contactos" id="Contactos">
         
         <div class="Enderecos">
             <h3> Home Office</h2>
@@ -231,28 +216,31 @@
           
             <span>Visite nos</span>
             <div class="RS-Icon">
-             <li><a href="#"> <i class="bi bi-instagram"></i></a></li>
-            <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+             <li><a href="#"> <i class="bi-instagram"></i></a></li>
+            <li><a href="#"><i class="bi-facebook"></i></a></li>
 
             </div>
             
         </div>
+        <div class="politicas-Reservados">
+            
+        </div>
+
         <div class="politicas">
             <span> <a href="#">Politicas De Cookie</a></span>
             <span> <a href="#">Politicas De Privacidade</a></span>
             <span> <a href="#">Livro de Reclamacoes</a></span>
         </div>
+        <div class="Reservados">
+            <P>@2023 PizzaShop, Web Design by Avelino Sumbane</P>
+        </div>
           
-    
         
+      
     </section>
    
 
-  
-    <div class="Reservados">
-        <P>@2023 PizzaShop, Web Design by Avelino Sumbane</P>
-    </div>
-
+   
 
 
 </footer>
