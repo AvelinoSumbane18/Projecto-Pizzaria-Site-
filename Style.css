@@ -20,14 +20,29 @@ html{
 
 .content{
     width: 100vw;
-    height: 70px;
+    height: 10vh;
     display: flex;
     background-color: #1f1e1f;
     justify-content: space-around;
     position: fixed;
+   z-index: 195;
     align-items: center;
     
+    
 }
+
+::-webkit-scrollbar{
+    background-color:#fff;
+    width: 10px;
+    border-radius: 10%;
+}
+::-webkit-scrollbar-thumb{
+    background-color:#ffc506;
+    border-radius: 10%;
+    opacity: 0.2;
+}
+  
+
 .logo{
     width: 70px;
     height: auto;
@@ -43,6 +58,12 @@ html{
 .logo img{
 width: 100%;
 height: 100%;
+}
+.bi-instagram {
+    color: #C13584;
+}
+.bi-facebook {
+    color: #3b5998;
 }
 .content .menu{
     width: 600px;
@@ -140,7 +161,7 @@ section{
 .Cozinha img{
     width: 400px;
     height: 450px;
-    margin-top: 10rem;
+    margin-top: 11rem;
     border: 1px solid #fff;
     margin-left: 3rem;
 }
@@ -160,12 +181,15 @@ gap:50px;
     font-size: 6rem;
     color: #fff;
 }
-.Decricao p{
-    width: 700px;
+.Decricao p, .First-p{
+width: 700px;
 font-size: 2.5rem;
 color: whitesmoke;
 line-height: 3rem;
+text-align: justify;
+
 }
+
 /*Cardapio*/
 .cardapio{
     background-image: linear-gradient(rgba(12, 12, 12, 0.8), rgba(15, 15, 15, 0.8)), url(/Assents/cardapio.jpg);
@@ -269,163 +293,95 @@ gap: 50px;
 footer{
     background-color: #1f1e1f;
     width: 100vw;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    max-height: 20%;
+    height: 350px;
+    color: #fff;
 }
-footer h1{
+.Contactos h3{
+    font-size: 3rem;
+}
+.Contactos span{
+    font-size: 1.8rem;
+}
+.bi-instagram,.bi-facebook{
+    font-size: 2.5rem;
+}
+ footer .Contactos {
     display: grid;
-    place-items: center;
-    margin-top: 3rem;
-    font-size: 6rem;
-    color: white;
-}
-.Contactos{
-display: grid;
-grid-template-columns: 1fr 1fr;
-grid-template-rows: 50% 20% 20%;
-width: 100%;
-place-items: center;
-margin-top: 4rem;
-gap:20px;
-grid-template-areas: "Enderecos Redes-Socias"
-                     "politicas politicas"
-                     "Reservados Reservados";
-height: 250px;
-}
-.Contactos img{
-    width: 100px;
-    height:100px ;
- 
-}
-.Enderecos{
+    grid-template-columns: repeat(2 250px);
+    gap: 50px;
+    grid-template-rows: 30% 30% 5% 5%;
+    grid-template-areas: "Endereco Horarios"
+                         "Endereco Horarios"
+                         "nothing Rs-Sociais"
+                         "Reservado Reservado";
+    align-items: center;    
+    justify-items: center;      
+    position: relative;           
+ }
+ .Endereco{
+    grid-area: Endereco;
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    grid-area: Enderecos;
-    margin-right: 16rem;
-    color: white;
-}
-.Enderecos h3{
-    font-size: 3rem;
-}
-.Enderecos span{
-    font-size: 2.5rem;
-}
-.Contactos .Redes-Socias {
-    display:flex;
+    
+
+ }
+ .Horarios{
+    grid-area: Horarios;
+    display: flex;
     flex-direction: column;
-    gap: 10px;
-    grid-area: Redes-Socias;
-    margin-left: 26rem;
-    color: #fff;
-    
-}
-.Contactos .Redes-Socias span{
-    font-size: 3rem;
-    margin-left: 2rem;
-    color: #fff;
-}
-.Contactos .Redes-Socias i{
-    font-size: 3rem;
-}
+    margin-bottom: 3rem;
 
-.RS-Icon{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin-right: 12rem;
-}
- .bi-facebook{
-color: #3b5998;
-}
-.bi-instagram{
-    color: #C13584;
-}
-
-.Logo-PizzaShop{
-    display: flex;
-    align-items: center;
-    
-
-    
-}
-.Logo-PizzaShop h2{
-    font-size: 3rem;
-    color: #fff;
-}
-.politicas{
-    grid-area: politicas;
-    display: flex;
-    font-size: 2.5rem;
-    gap: 15px;
-    position: relative;
-    left: 0;
-    top: 12rem;
+ }
+ .Rs-Sociais{
+    grid-area: Rs-Sociais;
+    margin-right: 15rem;
+    position: absolute;
+    bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   
     
-    
-}
-.politicas a{
-    color: #fff;
+ }
+ .Rs-Icon{
 
-    
-}
- footer .Reservados{
-    grid-area: Reservados;
-    width: 100vw;
-    height: 30px;
+    display: flex;
+    gap: 10px;
+ }
+ .Reservado{
+    grid-area: Reservado;
     background-color: black;
-    color: white;
-    place-items: center;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    justify-content: flex-end;
-font-size: 1.5rem;
-border: none;
-margin-bottom: 22rem;
-position: relative;
-bottom: 15rem;
+    height: 35px;
+
+ }
+ .Reservado p{
+    font-size: 1.2rem;
+  
+ }
 
 
-}
-.Reservados P{
-    padding-bottom: 0.5rem;
-
-}
 
 
 /*Media Queries*/
-@media (max-width:1270px){
-    html{
-  
-        font-size: 58%;
-     
-     }
-    .Cozinha img{
-        width: 400px;
-        height: 450px;
-       
-       margin-top:13rem;
-        margin-left: 3rem;
-    }
+@media (max-width:1205px){
     .Decricao p{
-        width: 650px;
-   
-
-
-    }
-}
-
-@media (max-width:1200px){
+        width: 600px;
+      
+    
+        }
+        .Cozinha img{
+            width: 400px;
+            height: 500px;
+          }
+        }
+@media (max-width:1106px){
     html{
   
-        font-size: 56%;
+        font-size: 50%;
      
      }
     .itens-Cardapio{
@@ -440,45 +396,37 @@ bottom: 15rem;
         margin-bottom: 6rem;
         margin-top: 5rem;
     }
+    /*
+    #Last-block{
+       margin-left: 35rem;
+    }
+    */
     .Decricao p{
         width: 550px;
 
     }  
     .Cozinha img{
-        width: 350px;
-        height: 480px;
+        width: 300px;
+        height: 350px;
        
-       margin-top:10rem;
+       margin-top:12rem;
         margin-left: 3rem;
 }
 }
-@media (max-width:1040px){
+
+@media (max-width:948px){
     .Decricao p{
         width: 450px;
-
-    }  
-    .Cozinha img{
-        width: 350px;
-        height: 480px;
-       
-       margin-top:18rem;
-        margin-left: 3rem;
-}
-
-.Enderecos {
-
-    margin-right: 4rem;
-  
-}
-.RS-Icon{
+      
     
- margin-left: 4rem;
-}
-}
-
-
-
-@media (max-width:950px){
+        }
+        .Cozinha img{
+            width: 300px;
+            height: 400px;
+            margin-top: 14rem;
+          }
+        }
+@media (max-width:845px){
    .content .menu{
 display:none ;
    } 
@@ -586,8 +534,7 @@ z-index: 199;
     margin-left: 2rem;
    }
    html{
-  
-   font-size: 50%;
+   font-size: 45%;
 
 }
 .Sobre-Nos .Content{
@@ -600,9 +547,9 @@ z-index: 199;
     align-items: center;
 }
 .Content  .Decricao p{
-    width: 550px;
+    width: 600px;
     margin :auto;
-  
+   
     
 }
 .Cozinha {
@@ -610,10 +557,10 @@ z-index: 199;
     align-items: center;
     justify-content: center;
 }
-.Content .Cozinha img{
-    width: 500px;
-    margin-bottom: 8rem;
-   
+.Cozinha img{
+    width: 400px;
+    height: 300px;
+   margin-bottom: 5rem;
 }
 .itens-Cardapio{
     width: 80%;
@@ -626,87 +573,143 @@ z-index: 199;
     grid-template-rows:1fr 1fr 1fr 1fr; 
     margin-bottom: 6rem;
     margin-top: 5rem;
-}  
-.Contactos .Redes-Socias {
+} 
 
-    margin-right :4rem;
-    
-}
-.Contactos .Enderecos{
-    margin-left :4rem;
-}
-}
 
-@media (max-width:812px){
-    .Contactos .Redes-Socias {
-
-        margin-right :6rem;
-        
-    }
-    .Contactos .Enderecos{
-        margin-left :6rem;
-    }
 
 }
-@media (max-width:780px){
+@media (max-width:665px){
+html{
+    font-size: 42%;
+}
+.Content  .Decricao p{
+    width: 450px;    
+}
+.Content .Cozinha img{
+    width: 350px;
+    height: 250px;    
+}
+}
+
+@media (max-width:600px){
 
     html{
-        font-size: 50%;
+        font-size: 35%;
     }
+    
+    .btn{
+        width: 300px;
+        height: 40px;
+        display: flex;
+        gap: 30px;       
+    }
+   
     .Content  .Decricao p{
-        width: 600px;    
+        width: 450px;    
     }
     .Content .Cozinha img{
-        width: 500px;
-        height: 500px;    
+        width: 350px;
+        height: 250px;    
     }
     .itens-Cardapio{
         width: 80%;
         display: grid;
-    
-        grid-template-columns: 80% ;
-        
-   
+        grid-template-columns: 65% ;
+     
     }  
-    Footer {
-        height: 640px;
+    footer {
+        height: 600px;
     }
-    Footer h1{
-    transform: translate(-30%);
-    }
-    .Contactos{
+    footer .Contactos {
         display: grid;
-        grid-template-columns: 1fr ;
-        grid-template-rows: 25% 25% 25% 5%;
-        width: 80%;
-        justify-content: flex-start;
-       
-        margin-top: 4rem;
-        gap:100px;
-        grid-template-areas: "Enderecos "
-                             "Redes-Socias "
-                             "politicas "
-                             "Reservados";
-        height: 250px;
-        }
-        .Contactos .Redes-Socias {
+        gap: 50px;
+        grid-template-columns: 100%;
+        grid-template-rows: 30% 30% 5% 100%;
+       grid-template-areas: "Endereco"
+                            "Horarios"
+                            "Rs-Sociais"
+                            "Reservado";
+                            align-items: flex-start;
+    justify-items: flex-start;
+    margin-left: 6rem;
+}
+.Endereco{
+    grid-area:Endereco ;
+}
+.Horarios{
+    grid-area: Horarios;
+}
+.Rs-Sociais{
+    grid-area: Rs-Sociais;
+}
+.Reservados{
+    grid-area: Reservado;
+   margin: 0;
+   position: absolute;
+   left: 3rem;
+}
 
-            transform: translate(-100%);
-        }
-        .Contactos .Enderecos{
-            transform: translate(-32%);
-        }
-        .Contactos .politicas{
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 20rem;
-            transform: translate(-65%);
-        }
-        }
-        Footer .Reservados{
-            margin-top: 30rem;
-        }
+
+}
+@media( max-width:486px) {
+    html{
+        font-size:32%;
+    }
+
+    .btn{
+    width: 200px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
    
+    }
+    .btn button{
+        width: 200px;
+        height: 50px;
     
-  
+    }
+    .Content  .Decricao p{
+        width: 300px;    
+    }
+    .Content .Cozinha img{
+        width: 250px;
+        height: 200px;    
+    }
+}
+@media( max-width:400px) {
+    html{
+        font-size: 30%;
+    }
 
+}
+@media( max-width:370px){
+    html{
+        font-size:28%;
+    }
+    .Conteudo-principal .Cp-Title{
+   
+        font-size: 5rem;
+    }
+    .Conteudo-principal .Cp-Subtitle{
+        font-size:3rem ;
+      
+    }
+    .btn button{
+        width: 150px;
+        height: 50px;
+    
+    }
+    .Content  .Decricao p{
+        width: 250px;    
+    }
+    .Content .Cozinha img{
+        width: 200px;
+        height: 150px;    
+    }
+    
+    
+
+}
