@@ -34,11 +34,11 @@ html{
 ::-webkit-scrollbar{
     background-color:#fff;
     width: 10px;
-    border-radius: 10%;
+    border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb{
-    background-color:#ffc506;
-    border-radius: 10%;
+    background-color:#e7b613;
+    border-radius:20px;
     opacity: 0.2;
 }
   
@@ -293,7 +293,7 @@ gap: 50px;
 footer{
     background-color: #1f1e1f;
     width: 100vw;
-    height: 350px;
+    height: 420px;
     color: #fff;
 }
 .Contactos h3{
@@ -302,7 +302,7 @@ footer{
 .Contactos span{
     font-size: 1.8rem;
 }
-.bi-instagram,.bi-facebook{
+.Rs-Sociais, .bi-instagram .bi-facebook{
     font-size: 2.5rem;
 }
  footer .Contactos {
@@ -316,7 +316,7 @@ footer{
                          "Reservado Reservado";
     align-items: center;    
     justify-items: center;      
-    position: relative;           
+             
  }
  .Endereco{
     grid-area: Endereco;
@@ -334,9 +334,7 @@ footer{
  }
  .Rs-Sociais{
     grid-area: Rs-Sociais;
-    margin-right: 15rem;
-    position: absolute;
-    bottom: 0;
+    margin-right: 10rem;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -440,15 +438,15 @@ display:none ;
     max-width: 28px;
     width: 100%;
     position: absolute;
-    top:2.4rem ;
+    top:2.5rem ;
     right: 4.9rem;
     z-index: 199;
     
    }
    .Fake-Menu{
     position: absolute;
-    top:1.9rem ;
-    right: 5.1rem;
+    top:2.2rem ;
+    right: 5rem;
     width: 25px;
     height: 27px;
     cursor: pointer;
@@ -594,35 +592,64 @@ html{
 @media (max-width:600px){
 
     html{
-        font-size: 35%;
+        font-size: 40%;
     }
-    
     .btn{
-        width: 300px;
-        height: 40px;
-        display: flex;
-        gap: 30px;       
-    }
+        width: 400px;
+        height: 120px;
+        gap:20px;
+        }
+        .btn button{
+            width: 150px;
+            height: 50px;
+            font-size: 2rem;
+        
+        }
    
     .Content  .Decricao p{
-        width: 450px;    
+        width: 500px;  
+        padding: 0px 5%;
+        
+       
     }
     .Content .Cozinha img{
-        width: 350px;
-        height: 250px;    
+        width: 320px;
+        height: 220px;    
     }
     .itens-Cardapio{
         width: 80%;
         display: grid;
         grid-template-columns: 65% ;
+        grid-template-rows: auto;
+        gap: 10px;
+        margin-top: 15rem;
+      margin-bottom: 15rem;
+    }
+      .itens-Cardapio .info .btn-pedir{
+        width: 50%;
+        height: 6rem;
+}
+   
+.itens-Cardapio .info h3{
+    font-size: 4rem;
+ 
+
+}
+.itens-Cardapio .info h4{
+    font-size: 2.5rem;
+   
+}
+.itens-Cardapio .info .btn-pedir{
+    font-size: 2.5rem;
+}
+}     
      
-    }  
     footer {
-        height: 600px;
+        height: 500px;
     }
     footer .Contactos {
         display: grid;
-        gap: 50px;
+        gap: 30px;
         grid-template-columns: 100%;
         grid-template-rows: 30% 30% 5% 100%;
        grid-template-areas: "Endereco"
@@ -631,10 +658,24 @@ html{
                             "Reservado";
                             align-items: flex-start;
     justify-items: flex-start;
-    margin-left: 6rem;
+ 
+ 
+   position: relative;
+}
+footer .Contactos :not(:last-child){
+
+margin-left: 3rem;
+}
+.Contactos h3{
+    font-size: 3.5rem;
+}
+.Contactos span{
+    font-size: 2.2rem;
 }
 .Endereco{
     grid-area:Endereco ;
+    
+   
 }
 .Horarios{
     grid-area: Horarios;
@@ -642,23 +683,27 @@ html{
 .Rs-Sociais{
     grid-area: Rs-Sociais;
 }
+.Rs-Sociais, .bi-instagram .bi-facebook{
+    font-size: 3rem;
+}
 .Reservados{
     grid-area: Reservado;
-   margin: 0;
-   position: absolute;
-   left: 3rem;
+position: absolute;
+width: 100vw;
+
 }
 
 
-}
-@media( max-width:486px) {
+
+@media( max-width:550px) {
     html{
-        font-size:32%;
+        font-size:38%;
     }
+    
 
     .btn{
     width: 200px;
-    height: 80px;
+    height: 120px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -667,31 +712,58 @@ html{
    
     }
     .btn button{
-        width: 200px;
-        height: 50px;
+        width: 150px;
+        height: 60px;
+        font-size: 2.5rem;
     
     }
     .Content  .Decricao p{
-        width: 300px;    
+        width: 450px;  
+        font-size: 3rem;
+        margin: 0px 2rem;
+ 
     }
     .Content .Cozinha img{
-        width: 250px;
+        width: 300px;
         height: 200px;    
     }
+  
+   
+@media( max-width:506px){
+html{
+    font-size: 37%;
 }
-@media( max-width:400px) {
+.itens-Cardapio{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 70% ;
+}
+}
+@media( max-width:425px){
     html{
-        font-size: 30%;
+        font-size:34% ;
+    }
+    .Conteudo-principal .Cp-Title{
+        font-size: 5.5rem;
+    }
+    .Conteudo-principal .Cp-Subtitle{
+        font-size:3rem ;
+        color: #fff;
+        font-weight: 400;
+    }
+    .Content  .Decricao p{
+        width: 400px; 
+        
     }
 
-}
+
 @media( max-width:370px){
     html{
-        font-size:28%;
+        font-size:29%;
     }
     .Conteudo-principal .Cp-Title{
    
-        font-size: 5rem;
+        font-size: 5.5rem;
     }
     .Conteudo-principal .Cp-Subtitle{
         font-size:3rem ;
@@ -709,7 +781,32 @@ html{
         width: 200px;
         height: 150px;    
     }
-    
-    
+}
 
+}
+@media( max-width:320px){
+    html{
+        font-size: 28%;
+    }
+    .itens-Cardapio .info h3{
+        font-size: 5rem;
+     
+    
+    }
+    .itens-Cardapio .info h4{
+        font-size: 3rem;
+       
+    }
+    .itens-Cardapio .info .btn-pedir{
+        font-size: 3rem;
+    }
+    .itens-Cardapio .info .btn-pedir{
+        width: 55%;
+        height: 8rem;
+}
+    .itens-Cardapio {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 70%;
+        
 }
