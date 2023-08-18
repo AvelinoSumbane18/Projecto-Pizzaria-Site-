@@ -48,6 +48,7 @@ html{
     height: auto;
     display: flex;
     align-items: center;
+    
   
 }
 .logo .logo-title{
@@ -161,7 +162,7 @@ section{
 .Cozinha img{
     width: 400px;
     height: 450px;
-    margin-top: 11rem;
+    margin-top: 16rem;
     border: 1px solid #fff;
     margin-left: 3rem;
 }
@@ -181,14 +182,16 @@ gap:50px;
     font-size: 6rem;
     color: #fff;
 }
-.Decricao p, .First-p{
+.Decricao p{
 width: 700px;
 font-size: 2.5rem;
 color: whitesmoke;
 line-height: 3rem;
 text-align: justify;
+margin-top: 1.5rem;
 
 }
+
 
 /*Cardapio*/
 .cardapio{
@@ -202,7 +205,7 @@ text-align: justify;
    
 }
 .cardapio h1{
-    margin-top: 2rem;
+    margin-top: 3rem;
     font-size: 6rem;
     color: #fff;
     text-transform: uppercase;
@@ -365,21 +368,19 @@ footer{
 
 
 /*Media Queries*/
-@media (max-width:1205px){
+@media (max-width:1206px){
     .Decricao p{
-        width: 600px;
-      
-    
+        width: 650px;
         }
         .Cozinha img{
             width: 400px;
             height: 500px;
           }
         }
-@media (max-width:1106px){
+@media (max-width:1152px){
     html{
   
-        font-size: 50%;
+        font-size: 52%;
      
      }
     .itens-Cardapio{
@@ -387,44 +388,40 @@ footer{
         display: grid;
         place-items: center;
         align-items: center;
-        grid-gap:25px;
+        grid-gap: 5px 50px;
         justify-content: center;
-        grid-template-columns: 35% 35% 35%;
-        grid-template-rows:1fr 1fr 1fr ; 
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows:auto ; 
         margin-bottom: 6rem;
         margin-top: 5rem;
     }
-    /*
-    #Last-block{
-       margin-left: 35rem;
-    }
-    */
     .Decricao p{
         width: 550px;
 
     }  
     .Cozinha img{
         width: 300px;
-        height: 350px;
+        height: 400px;
        
-       margin-top:12rem;
+       margin-top:16rem;
         margin-left: 3rem;
 }
 }
 
-@media (max-width:948px){
+@media (max-width:964px){
     .Decricao p{
-        width: 450px;
-      
-    
+        width: 550px;
+        padding: 0px 3rem;
         }
         .Cozinha img{
             width: 300px;
             height: 400px;
-            margin-top: 14rem;
-          }
+            margin-left: -4rem;
+            margin-top:18rem;
         }
-@media (max-width:845px){
+    }
+@media (max-width:878px){
+
    .content .menu{
 display:none ;
    } 
@@ -438,21 +435,22 @@ display:none ;
     max-width: 28px;
     width: 100%;
     position: absolute;
-    top:2.5rem ;
-    right: 4.9rem;
+    top:4rem ;
+    right: 5rem;
     z-index: 199;
     
    }
    .Fake-Menu{
     position: absolute;
-    top:2.2rem ;
-    right: 5rem;
+    top:4.5rem ;
+    right: 3.8rem;
     width: 25px;
     height: 27px;
     cursor: pointer;
     opacity: 0;
     z-index: 200;
     transition: all 1s ease;
+    
    }
     .Fake-Menu:checked ~ .content {
     background-color:linear-gradient(rgba(12, 12, 12, 0.8), rgba(15, 15, 15, 0.8));
@@ -532,7 +530,7 @@ z-index: 199;
     margin-left: 2rem;
    }
    html{
-   font-size: 45%;
+   font-size: 50%;
 
 }
 .Sobre-Nos .Content{
@@ -545,9 +543,9 @@ z-index: 199;
     align-items: center;
 }
 .Content  .Decricao p{
-    width: 600px;
+    width: 700px;
     margin :auto;
-   
+   margin-top: 1.5rem;
     
 }
 .Cozinha {
@@ -556,19 +554,19 @@ z-index: 199;
     justify-content: center;
 }
 .Cozinha img{
-    width: 400px;
+    width: 450px;
     height: 300px;
-   margin-bottom: 5rem;
+ margin-top: 6rem;
 }
 .itens-Cardapio{
     width: 80%;
     display: grid;
     place-items: center;
     align-items: center;
-    grid-gap:25px;
+    grid-gap:5px 40px;
     justify-content: center;
-    grid-template-columns: 45% 45% ;
-    grid-template-rows:1fr 1fr 1fr 1fr; 
+    grid-template-columns: 42% 42% ;
+    grid-template-rows:auto; 
     margin-bottom: 6rem;
     margin-top: 5rem;
 } 
@@ -576,50 +574,52 @@ z-index: 199;
 
 
 }
-@media (max-width:665px){
+@media (max-width:758px){
 html{
-    font-size: 42%;
+    font-size: 48%;
 }
 .Content  .Decricao p{
-    width: 450px;    
+    width: 600px;
+   
 }
 .Content .Cozinha img{
-    width: 350px;
-    height: 250px;    
+    width: 400px;
+    height: 250px; 
+    margin-left: 0;   
 }
 }
 
-@media (max-width:600px){
+@media (max-width:654px){
 
     html{
-        font-size: 40%;
+        font-size: 44%;
     }
     .btn{
-        width: 400px;
+        width: 300px;
         height: 120px;
         gap:20px;
         }
         .btn button{
             width: 150px;
             height: 50px;
-            font-size: 2rem;
+            font-size: 2.2rem;
         
         }
    
     .Content  .Decricao p{
-        width: 500px;  
-        padding: 0px 5%;
-        
-       
+        width: 600px;  
+       display: flex;
+       align-items: center;
+       justify-content: center;
     }
     .Content .Cozinha img{
-        width: 320px;
-        height: 220px;    
+        width: 350px;
+        height: 250px;
     }
     .itens-Cardapio{
         width: 80%;
         display: grid;
-        grid-template-columns: 65% ;
+        grid-template-columns: 60% ;
         grid-template-rows: auto;
         gap: 10px;
         margin-top: 15rem;
@@ -695,71 +695,79 @@ width: 100vw;
 
 
 
-@media( max-width:550px) {
+@media( max-width:638px) {
     html{
-        font-size:38%;
-    }
-    
-
-    .btn{
-    width: 200px;
-    height: 120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-   
-    }
-    .btn button{
-        width: 150px;
-        height: 60px;
-        font-size: 2.5rem;
-    
+        font-size: 40%;
     }
     .Content  .Decricao p{
-        width: 450px;  
-        font-size: 3rem;
-        margin: 0px 2rem;
- 
+        width: 500px;  
+        font-size: 2.5rem;  
     }
     .Content .Cozinha img{
-        width: 300px;
-        height: 200px;    
+        width: 350px;
+        height: 250px;    
     }
-  
-   
-@media( max-width:506px){
-html{
-    font-size: 37%;
+    .itens-Cardapio{
+        width: 80%;
+        display: grid;
+        grid-template-columns: 65% ;
+       
+    }
+
+
 }
+   
+@media( max-width:540px){
+html{
+    font-size: 38%;
+}
+.Content  .Decricao p{
+    width: 450px; 
+    font-size: 2.5rem;
+    
+}
+.Content .Cozinha img{
+    width: 300px;
+    height: 200px;    
+}
+
 .itens-Cardapio{
     width: 80%;
     display: grid;
     grid-template-columns: 70% ;
 }
 }
-@media( max-width:425px){
+
+@media( max-width:494px){
     html{
-        font-size:34% ;
+        font-size:36% ;
     }
-    .Conteudo-principal .Cp-Title{
-        font-size: 5.5rem;
-    }
-    .Conteudo-principal .Cp-Subtitle{
-        font-size:3rem ;
-        color: #fff;
-        font-weight: 400;
+    .btn{
+        width: 400px;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+      
     }
     .Content  .Decricao p{
-        width: 400px; 
+        width: 420px; 
+        font-size: 2.5rem;
         
     }
+    .Content .Cozinha img{
+        width: 300px;
+        height: 200px;    
+    }
+}
 
 
-@media( max-width:370px){
+
+@media( max-width:442px){
     html{
-        font-size:29%;
+        font-size:34%;
     }
     .Conteudo-principal .Cp-Title{
    
@@ -775,21 +783,36 @@ html{
     
     }
     .Content  .Decricao p{
-        width: 250px;    
+        width: 350px;  
+        font-size: 3rem;  
     }
     .Content .Cozinha img{
-        width: 200px;
-        height: 150px;    
+        width: 300px;
+        height: 220px;    
     }
 }
 
-}
-@media( max-width:320px){
+
+@media( max-width:398px){
     html{
-        font-size: 28%;
+        font-size: 30%;
     }
+    .btn button{
+      font-size: 2.8rem;
+    }
+    .Content  .Decricao p{
+        width: 350px;  
+        font-size: 3.2rem;  
+        line-height: 3rem;
+    }
+    .Content .Cozinha img{
+        width: 250px;
+        height: 200px;    
+    }
+
+
     .itens-Cardapio .info h3{
-        font-size: 5rem;
+        font-size: 4.5rem;
      
     
     }
@@ -807,6 +830,19 @@ html{
     .itens-Cardapio {
         width: 100%;
         display: grid;
-        grid-template-columns: 70%;
+        grid-template-columns: 60%;
+        grid-template-rows: auto;
         
+}
+
+}
+@media( max-width:320px){
+    html{
+        font-size: 28%;
+    }
+    .Content  .Decricao p{
+        width: 280px;  
+        font-size: 3.2rem;  
+        line-height: 3rem;
+    }
 }
