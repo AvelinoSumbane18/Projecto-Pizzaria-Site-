@@ -33,7 +33,7 @@ html{
 
 ::-webkit-scrollbar{
     background-color:#fff;
-    width: 10px;
+    width: 6px;
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb{
@@ -186,7 +186,7 @@ gap:50px;
 width: 700px;
 font-size: 2.5rem;
 color: whitesmoke;
-line-height: 3rem;
+line-height: 3.5rem;
 text-align: justify;
 margin-top: 1.5rem;
 
@@ -205,7 +205,7 @@ margin-top: 1.5rem;
    
 }
 .cardapio h1{
-    margin-top: 3rem;
+    margin-top: 5rem;
     font-size: 6rem;
     color: #fff;
     text-transform: uppercase;
@@ -215,10 +215,10 @@ margin-top: 1.5rem;
     display: grid;
     place-items: center;
     align-items: center;
-    grid-gap:25px;
+    grid-gap:30px;
     justify-content: center;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows:1fr 1fr; 
+    grid-template-columns: 28% 25% 25% 25%;
+    grid-template-rows:0.5fr 0.5fr; 
     grid-template-areas: "C-item1 C-item2 C-item1 C-item2"
                          "C-item1 C-item2 C-item1 C-item2";
     height: 100%;
@@ -253,7 +253,7 @@ margin-top: 1.5rem;
     align-items: center;
     gap: 5px;
     width: 100%;
-    height: 150%;
+    height: 100%;
     border-radius:0px 0px 20px 20px;;
   
 
@@ -294,133 +294,168 @@ gap: 50px;
 }
 /*Footer*/
 footer{
-    background-color: #1f1e1f;
     width: 100vw;
-    height: 420px;
-    color: #fff;
+    height: 100%;
+    background-color: #1f1e1f;
+    color:#fff;
 }
-.Contactos h3{
+footer .Contactos{
+    display: grid;
+    width: 100%;
+    height: 355px;
+    gap: 30px 200px ; 
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 35% 20% 10% 5%;
+    grid-template-areas: "Endereco Horarios"
+                         "nothing Rs-Sociais"
+                         "politicas-pri politicas-pri"
+                         "Reservados Reservados";
+    justify-content: center;   
+    place-items: center
+    ;  
+  
+               
+
+}
+
+.Contactos h4{
     font-size: 3rem;
 }
 .Contactos span{
     font-size: 1.8rem;
 }
-.Rs-Sociais, .bi-instagram .bi-facebook{
-    font-size: 2.5rem;
-}
- footer .Contactos {
-    display: grid;
-    grid-template-columns: repeat(2 250px);
-    gap: 50px;
-    grid-template-rows: 30% 30% 5% 5%;
-    grid-template-areas: "Endereco Horarios"
-                         "Endereco Horarios"
-                         "nothing Rs-Sociais"
-                         "Reservado Reservado";
-    align-items: center;    
-    justify-items: center;      
-             
- }
- .Endereco{
+.Contactos .Endereco{
     grid-area: Endereco;
     display: flex;
     flex-direction: column;
-    
-
- }
- .Horarios{
+    gap: 10px;
+  
+  
+}
+.Contactos .Horarios{
     grid-area: Horarios;
     display: flex;
+    justify-content: center;
+    align-items: start;
     flex-direction: column;
+    gap: 10px;
     margin-bottom: 3rem;
 
- }
- .Rs-Sociais{
-    grid-area: Rs-Sociais;
-    margin-right: 10rem;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  
-    
- }
- .Rs-Icon{
 
+}
+
+.Contactos .Rs-Sociais{
+grid-area: Rs-Sociais;
+display: flex;
+flex-direction: column;
+gap:10px;
+margin-right: 12rem;
+
+
+}
+.Contactos #Rs-icons{
     display: flex;
     gap: 10px;
- }
- .Reservado{
-    grid-area: Reservado;
-    background-color: black;
-    width: 100%;
+}
+#Rs-icons .bi-instagram, .bi-facebook{
+    font-size: 2rem;
+}
+.Contactos .politicas-pri{
+    grid-area: politicas-pri;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+   
+ 
+}
+.Contactos .politicas-pri li a {
+    font-size: 1.2rem;
+    color: #fff;
+    transition: all 204ms ease-in
+}
+.Contactos .politicas-pri li a:hover{
+    color: #ffc506;
+}
+
+.Contactos .Reservados{
+    grid-area: Reservados;
+    background-color: #000;
+    width: 100vw;
+    height: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 35px;
 
- }
- .Reservado p{
+
+}
+.Contactos .Reservados p{
     font-size: 1.2rem;
-  
- }
-
-
-
+}
 
 /*Media Queries*/
-@media (max-width:1206px){
+@media (max-width:1208px){
+    html{
+        font-size: 57%;
+    }
     .Decricao p{
         width: 650px;
         }
         .Cozinha img{
-            width: 400px;
-            height: 500px;
+            width: 350px;
+            height: 420px;
+            margin-top: 14rem;
           }
+        
+        .itens-Cardapio{
+            width: 80%;
+            display: grid;
+            place-items: center;
+            align-items: center;
+            grid-gap: 5px 50px;
+            justify-content: center;
+            grid-template-columns: 33% 33% 33% ;
+            grid-template-rows:auto ; 
+            margin-bottom: 6rem;
+            margin-top: 5rem;
         }
-@media (max-width:1152px){
-    html{
+    }
+        @media (max-width:1108px){
+            html{
+                font-size: 55%;
+            }
+            .Decricao p{
+                width: 550px;
+                }
+                .Cozinha img{
+                
+                    margin-top: 17rem;
+                  }
+
+        }
+        @media (max-width:1008px){
+            html{
+                font-size: 52%;
+            }
+            .Content{
+                display: flex;
+            
+          
+                gap:30px;
+                
+                }
   
-        font-size: 52%;
-     
-     }
-    .itens-Cardapio{
-        width: 80%;
-        display: grid;
-        place-items: center;
-        align-items: center;
-        grid-gap: 5px 50px;
-        justify-content: center;
-        grid-template-columns: 33% 33% 33%;
-        grid-template-rows:auto ; 
-        margin-bottom: 6rem;
-        margin-top: 5rem;
-    }
-    .Decricao p{
-        width: 550px;
-
-    }  
-    .Cozinha img{
-        width: 300px;
-        height: 400px;
-       
-       margin-top:16rem;
-        margin-left: 3rem;
-}
-}
-
-@media (max-width:964px){
-    .Decricao p{
-        width: 550px;
-        padding: 0px 3rem;
+            .Decricao p{
+                width: 500px;
+                }
+                .Cozinha img{
+                    margin-top: 18rem;
+                  }
         }
-        .Cozinha img{
-            width: 300px;
-            height: 400px;
-            margin-left: -4rem;
-            margin-top:18rem;
-        }
-    }
-@media (max-width:878px){
+
+
+
+@media (max-width:933px){
 
    .content .menu{
 display:none ;
@@ -431,6 +466,7 @@ display:none ;
    .menu-Hamburguer{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 8px;
     max-width: 28px;
     width: 100%;
@@ -438,6 +474,7 @@ display:none ;
     top:4rem ;
     right: 5rem;
     z-index: 199;
+   
     
    }
    .Fake-Menu{
@@ -570,52 +607,53 @@ z-index: 199;
     margin-bottom: 6rem;
     margin-top: 5rem;
 } 
-
+footer .Contactos{
+    height: 300px;
+    gap: 25px 140px ; 
+}
 
 
 }
-@media (max-width:758px){
+@media (max-width:779px){
+    html{
+        font-size: 48%;
+    }
+    .Content  .Decricao p{
+        width: 620px;
+      
+    }
+    footer .Contactos{
+        gap: 25px 80px ; 
+    }
+}
+@media (max-width:683px){
 html{
-    font-size: 48%;
+    font-size: 46%;
 }
 .Content  .Decricao p{
-    width: 600px;
-   
+    width: 550px;
+  
 }
+
 .Content .Cozinha img{
     width: 400px;
     height: 250px; 
-    margin-left: 0;   
+       
 }
 }
 
-@media (max-width:654px){
-
+@media (max-width:633px){
     html{
         font-size: 44%;
     }
-    .btn{
-        width: 300px;
-        height: 120px;
-        gap:20px;
-        }
-        .btn button{
-            width: 150px;
-            height: 50px;
-            font-size: 2.2rem;
-        
-        }
-   
     .Content  .Decricao p{
-        width: 600px;  
-       display: flex;
-       align-items: center;
-       justify-content: center;
+        width: 500px;
+      
     }
-    .Content .Cozinha img{
-        width: 350px;
-        height: 250px;
-    }
+
+
+   
+   
     .itens-Cardapio{
         width: 80%;
         display: grid;
@@ -628,6 +666,7 @@ html{
       .itens-Cardapio .info .btn-pedir{
         width: 50%;
         height: 6rem;
+        font-size: 2.5rem;
 }
    
 .itens-Cardapio .info h3{
@@ -639,69 +678,97 @@ html{
     font-size: 2.5rem;
    
 }
-.itens-Cardapio .info .btn-pedir{
-    font-size: 2.5rem;
+footer{
+    height: 100%;
 }
+footer .Contactos{
+    display: grid;
+    width: 100%;
+    height: 410px;
+    gap: 42px 50px; 
+    grid-template-columns: 100%;
+    grid-template-rows: 18% 18% 5% 10% 5%;
+    grid-template-areas: "Endereco "
+                         "Horarios "
+                         "Rs-Sociais "
+                         " politicas-pri"
+                         "Reservados";
+ 
+    justify-items: flex-start
+    ;       
+    
+}      
+
+
+.Contactos .Endereco{
+    grid-area: Endereco;
+    margin-left: 10rem;
+}
+.Contactos .Horarios{
+    grid-area: Horarios;
+    margin-left: 10rem;
+}
+
+.Contactos .Rs-Sociais{
+    grid-area: Rs-Sociais;
+    margin-left: 10rem;
+}
+
+.Contactos .politicas-pri{
+    grid-area: politicas-pri;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10rem;
+}
+.Contactos .politicas-pri :nth-child(1){
+margin-right: 9rem;
+}
+.Contactos .politicas-pri :nth-child(3){
+    margin-right: 6rem; 
+}
+
+
+
+.Contactos .Reservados{
+    grid-area: Reservados;
+}
+
+
 }     
      
-    footer {
-        height: 500px;
-    }
-    footer .Contactos {
-        display: grid;
-        gap: 30px;
-        grid-template-columns: 100%;
-        grid-template-rows: 30% 30% 5% 100%;
-       grid-template-areas: "Endereco"
-                            "Horarios"
-                            "Rs-Sociais"
-                            "Reservado";
-                            align-items: flex-start;
-    justify-items: flex-start;
- 
- 
-   position: relative;
-}
-footer .Contactos :not(:last-child){
-
-margin-left: 3rem;
-}
-.Contactos h3{
-    font-size: 3.5rem;
-}
-.Contactos span{
-    font-size: 2.2rem;
-}
-.Endereco{
-    grid-area:Endereco ;
-    
    
-}
-.Horarios{
-    grid-area: Horarios;
-}
-.Rs-Sociais{
-    grid-area: Rs-Sociais;
-}
-.Rs-Sociais, .bi-instagram .bi-facebook{
-    font-size: 3rem;
-}
-.Reservados{
-    grid-area: Reservado;
-position: absolute;
-width: 100vw;
-
-}
 
 
 
-@media( max-width:638px) {
+
+@media( max-width:551px) {
     html{
         font-size: 40%;
     }
     .Content  .Decricao p{
-        width: 500px;  
-        font-size: 2.5rem;  
+        width: 420px; 
+        font-size: 2.5rem;
+        
+    }
+
+    .btn{
+        width: 250px;
+        height: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 25px;
+        margin-top: 4rem;
+        
+        
+    }
+    .btn button{
+        width: 100%;
+        height: 50px;
+       ;
+     
+      
     }
     .Content .Cozinha img{
         width: 350px;
@@ -714,13 +781,34 @@ width: 100vw;
        
     }
 
+    footer .Contactos{
+        display: grid;
+        width: 100%;
+        height: 410px;
+        gap: 42px 50px; 
+        grid-template-columns: 100%;
+        grid-template-rows: 18% 18% 5% 10% 5%;
+        grid-template-areas: "Endereco "
+                             "Horarios "
+                             "Rs-Sociais "
+                             " politicas-pri"
+                             "Reservados";
+     
+        justify-items: flex-start
+        ;       
+        
+    } 
+
+   
+
 
 }
    
-@media( max-width:540px){
-html{
-    font-size: 38%;
-}
+@media( max-width:508px){
+    html{
+        font-size: 38%;
+    }
+
 .Content  .Decricao p{
     width: 450px; 
     font-size: 2.5rem;
@@ -738,20 +826,11 @@ html{
 }
 }
 
-@media( max-width:494px){
+@media( max-width:499px){
     html{
-        font-size:36% ;
+        font-size: 36%;
     }
-    .btn{
-        width: 400px;
-        height: 150px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 25px;
-      
-    }
+
     .Content  .Decricao p{
         width: 420px; 
         font-size: 2.5rem;
@@ -761,14 +840,32 @@ html{
         width: 300px;
         height: 200px;    
     }
+    footer .Contactos{
+        display: grid;
+        width: 100%;
+        height: 410px;
+        gap: 42px 50px; 
+        grid-template-columns: 100%;
+        grid-template-rows: 18% 18% 5% 10% 5%;
+        grid-template-areas: "Endereco "
+                             "Horarios "
+                             "Rs-Sociais "
+                             " politicas-pri"
+                             "Reservados";
+     
+        justify-items: flex-start
+        ;       
+        
+    } 
 }
 
 
 
 @media( max-width:442px){
     html{
-        font-size:34%;
+        font-size: 34%;
     }
+ 
     .Conteudo-principal .Cp-Title{
    
         font-size: 5.5rem;
@@ -790,13 +887,34 @@ html{
         width: 300px;
         height: 220px;    
     }
+    footer .Contactos{
+        display: grid;
+        width: 100%;
+        height: 410px;
+        gap: 42px 50px; 
+        grid-template-columns: 100%;
+        grid-template-rows: 18% 18% 5% 10% 5%;
+        grid-template-areas: "Endereco "
+                             "Horarios "
+                             "Rs-Sociais "
+                             " politicas-pri"
+                             "Reservados";
+     
+        justify-items: flex-start
+        ;       
+        
+    } 
+
+   
 }
 
 
 @media( max-width:398px){
     html{
-        font-size: 30%;
+        font-size: 32%;
     }
+ 
+ 
     .btn button{
       font-size: 2.8rem;
     }
@@ -836,12 +954,13 @@ html{
 }
 
 }
-@media( max-width:320px){
+@media( max-width:360px){
     html{
-        font-size: 28%;
+        font-size: 30%;
     }
+ 
     .Content  .Decricao p{
-        width: 280px;  
+        width: 300px;  
         font-size: 3.2rem;  
         line-height: 3rem;
     }
